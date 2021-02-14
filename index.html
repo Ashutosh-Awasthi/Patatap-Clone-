@@ -191,6 +191,10 @@ body, html {
         {
             cir[i].scale(0.9);
             cir[i].fillColor.hue+=1;
+	    if(cir[i].area < 1) {
+              cir[i].remove();
+              cir.splice(i,1);
+          }
         }
     }
 </script>
